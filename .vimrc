@@ -25,7 +25,6 @@ set foldlevel=2
 
 
 " Colors and Fonts
-set background=dark
 syntax on
 set encoding=utf-8 "Encoding allows vim to show weird characters
 
@@ -35,3 +34,26 @@ set number " Show line numbers
 set showcmd " Show last command entered at the bottom
 set nowrap " Don't wrap lines
 
+
+" ----------------------------------------------------------------------------------------------------
+" This next Section is for plugins
+
+" Specify a directory for plugins
+" Followed by valid git locations for plugins
+
+call plug#begin('~/.vim/plugged')
+
+    Plug 'valloric/youcompleteme'
+    
+
+call plug#end() "Initialize plugin system
+
+" ----------------------------------------------------------------------------------------------------
+" HELP GUIDE
+
+" You need somewhere to store your vim plugins
+" so download plug.vim and put it in the ~/.vim/autoload/ directory
+" run something like wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+" To install plugins reload vimrc with ':source ~/.vimrc' and then in vim run ':PlugInstall'
+" To remove plugins reload vimrc and then in vim run ':PlugClean' which will remove undeclared plugins
